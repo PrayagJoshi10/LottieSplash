@@ -1,16 +1,28 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 
-interface Props {}
+const Splash = ({navigation}: any) => {
+  useEffect(() => {
+    const timeout = setTimeout(() => navigation.navigate('Home'), 2000);
+    return () => clearTimeout(timeout);
+  }, [navigation]);
 
-const Splash = (props: Props) => {
   return (
-    <View>
-      <Text>Splash</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>My Navigation App</Text>
     </View>
   );
 };
 
-export default Splash;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 30,
+  },
+});
 
-const styles = StyleSheet.create({});
+export default Splash;
