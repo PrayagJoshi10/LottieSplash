@@ -3,14 +3,14 @@ import React from 'react';
 
 interface Props {}
 
-const App = (props: Props) => {
+const Home = (props: Props) => {
   return (
     <View>
-      <Text>App</Text>
+      <Text>Home</Text>
     </View>
   );
 };
 
-export default App;
+export default Home;
 
 const styles = StyleSheet.create({});

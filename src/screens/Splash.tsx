@@ -3,14 +3,14 @@ import React from 'react';
 
 interface Props {}
 
-const App = (props: Props) => {
+const Splash = (props: Props) => {
   return (
     <View>
-      <Text>App</Text>
+      <Text>Splash</Text>
     </View>
   );
 };
 
-export default App;
+export default Splash;
 
 const styles = StyleSheet.create({});
