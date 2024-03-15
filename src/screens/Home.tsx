@@ -1,16 +1,25 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {View, Text, Button, StyleSheet} from 'react-native';
 
-interface Props {}
-
-const Home = (props: Props) => {
+const Home = ({navigation}: any) => {
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Welcome to the Home Screen!</Text>
+      <Button title="Go Back" onPress={() => navigation.goBack()} />
     </View>
   );
 };
 
-export default Home;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
+    marginBottom: 20,
+  },
+});
 
-const styles = StyleSheet.create({});
+export default Home;
